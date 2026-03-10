@@ -1,4 +1,4 @@
-// Types for AI Automation Agency Landing Page
+// Types for Pixoranest Landing Page
 
 export interface Stat {
   id: string;
