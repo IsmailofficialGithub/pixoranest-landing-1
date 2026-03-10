@@ -93,14 +93,14 @@ const Stats = ({ data }: StatsProps) => {
     >
 
       {/* Decorative elements */}
-      <div className="absolute top-1/2 left-0 w-64 h-64 bg-[#CCFF00]/5 rounded-full blur-3xl -translate-y-1/2" />
-      <div className="absolute top-1/2 right-0 w-64 h-64 bg-[#CCFF00]/5 rounded-full blur-3xl -translate-y-1/2" />
+      <div className="absolute top-1/2 left-0 w-64 h-64 bg-[#304f9f]/5 rounded-full blur-3xl -translate-y-1/2" />
+      <div className="absolute top-1/2 right-0 w-64 h-64 bg-[#304f9f]/5 rounded-full blur-3xl -translate-y-1/2" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Results That <span className="text-[#CCFF00]">Speak</span>
+            Results That <span className="text-[#304f9f]">Speak</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Real outcomes from businesses that have transformed their operations with our AI automation.
@@ -115,15 +115,15 @@ const Stats = ({ data }: StatsProps) => {
           {data.map((stat) => (
             <div
               key={stat.id}
-              className="stat-card group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#CCFF00]/50 transition-all duration-300 hover:bg-white/10 text-center"
+              className="stat-card group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#304f9f]/50 transition-all duration-300 hover:bg-white/10 text-center"
             >
               {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-[#CCFF00]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 rounded-2xl bg-[#304f9f]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Value */}
               <div className="relative">
                 <span
-                  className="stat-value text-5xl sm:text-6xl font-bold text-[#CCFF00] block mb-2"
+                  className="stat-value text-5xl sm:text-6xl font-bold text-[#304f9f] block mb-2"
                   data-value={stat.value}
                 >
                   0
@@ -141,7 +141,7 @@ const Stats = ({ data }: StatsProps) => {
               </div>
 
               {/* Bottom accent line */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#CCFF00] group-hover:w-1/2 transition-all duration-300" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#304f9f] group-hover:w-1/2 transition-all duration-300" />
             </div>
           ))}
         </div>

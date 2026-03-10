@@ -33,18 +33,23 @@
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: auto;
   }
-  
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: -0.02em;
   }
@@ -53,25 +58,25 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #CCFF00 0%, #99CC00 100%);
+    background-image: linear-gradient(135deg, #304f9f 0%, #304f4f 100%);
   }
-  
+
   .glow-accent {
-    box-shadow: 0 0 20px rgba(204, 255, 0, 0.3), 0 0 40px rgba(204, 255, 0, 0.1);
+    box-shadow: 0 0 20px #314f4e, 0 0 40px rgba(204, 255, 0, 0.1);
   }
-  
+
   .glow-accent-strong {
-    box-shadow: 0 0 30px rgba(204, 255, 0, 0.5), 0 0 60px rgba(204, 255, 0, 0.3);
+    box-shadow: 0 0 30px #314f4f, 0 0 60px #314f4e;
   }
-  
+
   .scan-line-glow {
-    box-shadow: 0 0 10px #CCFF00, 0 0 20px #CCFF00, 0 0 30px #CCFF00;
+    box-shadow: 0 0 10px #304f9f, 0 0 20px #304f9f, 0 0 30px #304f9f;
   }
-  
+
   .noise-overlay {
     position: relative;
   }
-  
+
   .noise-overlay::before {
     content: '';
     position: absolute;
@@ -81,27 +86,25 @@
     pointer-events: none;
     z-index: 1;
   }
-  
+
   .crt-lines {
     position: relative;
   }
-  
+
   .crt-lines::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.1) 0px,
-      rgba(0, 0, 0, 0.1) 1px,
-      transparent 1px,
-      transparent 2px
-    );
+    background: repeating-linear-gradient(0deg,
+        rgba(0, 0, 0, 0.1) 0px,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px);
     pointer-events: none;
     opacity: 0.1;
     z-index: 1;
   }
-  
+
   .text-balance {
     text-wrap: balance;
   }
@@ -122,23 +125,24 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #CCFF00;
+  background: #304f9f;
 }
 
 /* Selection */
 ::selection {
-  background: rgba(204, 255, 0, 0.3);
+  background: #314f4e;
   color: #fff;
 }
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid #CCFF00;
+  outline: 2px solid #304f9f;
   outline-offset: 2px;
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -173,7 +177,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #CCFF00;
+  background: #304f9f;
   mix-blend-mode: difference;
   z-index: 9999;
   transform: translate(-50%, -50%);
@@ -183,7 +187,7 @@
 .custom-cursor.hover {
   width: 50px;
   height: 50px;
-  background: rgba(204, 255, 0, 0.5);
+  background: #314f4f;
 }
 
 /* Button magnetic effect placeholder */
@@ -192,9 +196,11 @@
 }
 
 /* Input focus styles */
-input:focus, textarea:focus, select:focus {
-  border-color: #CCFF00 !important;
-  box-shadow: 0 0 0 2px rgba(204, 255, 0, 0.2);
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #304f9f !important;
+  box-shadow: 0 0 0 2px #7897e6;
 }
 
 /* Card hover lift */
@@ -217,6 +223,7 @@ input:focus, textarea:focus, select:focus {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -228,11 +235,14 @@ input:focus, textarea:focus, select:focus {
 
 /* Pulse animation for accent elements */
 @keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 10px rgba(204, 255, 0, 0.5);
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px #314f4f;
   }
+
   50% {
-    box-shadow: 0 0 25px rgba(204, 255, 0, 0.8);
+    box-shadow: 0 0 25px #122a65;
   }
 }
 
@@ -245,6 +255,7 @@ input:focus, textarea:focus, select:focus {
   from {
     clip-path: inset(0 100% 0 0);
   }
+
   to {
     clip-path: inset(0 0 0 0);
   }
@@ -260,6 +271,7 @@ input:focus, textarea:focus, select:focus {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -271,8 +283,22 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Stagger delay utilities */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+
+.stagger-5 {
+  animation-delay: 0.5s;
+}

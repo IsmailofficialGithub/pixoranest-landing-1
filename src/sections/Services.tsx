@@ -160,8 +160,8 @@ const ServiceRow = ({
           {/* Icon */}
           <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-500 ${
             isExpanded 
-              ? 'bg-[#CCFF00] text-black' 
-              : 'bg-[#CCFF00]/10 text-[#CCFF00] group-hover:bg-[#CCFF00]/20'
+              ? 'bg-[#304f9f] text-black' 
+              : 'bg-[#304f9f]/10 text-[#304f9f] group-hover:bg-[#304f9f]/20'
           }`}>
             <IconComponent />
           </div>
@@ -169,7 +169,7 @@ const ServiceRow = ({
           {/* Text content */}
           <div className="flex-1 min-w-0">
             <h3 className={`text-lg sm:text-xl font-semibold transition-colors duration-300 ${
-              isExpanded ? 'text-[#CCFF00]' : 'text-white group-hover:text-[#CCFF00]'
+              isExpanded ? 'text-[#304f9f]' : 'text-white group-hover:text-[#304f9f]'
             }`}>
               {service.name}
             </h3>
@@ -181,7 +181,7 @@ const ServiceRow = ({
 
         {/* Right side: Price and actions */}
         <div className="flex items-center gap-3 sm:gap-6">
-          <span className="text-[#CCFF00] font-medium text-sm hidden lg:block">
+          <span className="text-[#304f9f] font-medium text-sm hidden lg:block">
             {service.price}
           </span>
 
@@ -191,7 +191,7 @@ const ServiceRow = ({
               e.stopPropagation();
               onGetDemo();
             }}
-            className="bg-[#CCFF00] text-black hover:bg-[#b3e600] font-medium text-sm px-4 py-2 rounded-full hidden sm:flex transition-transform duration-300 hover:scale-105"
+            className="bg-[#304f9f] text-black hover:bg-[#b3e600] font-medium text-sm px-4 py-2 rounded-full hidden sm:flex transition-transform duration-300 hover:scale-105"
           >
             Get Demo
           </Button>
@@ -200,8 +200,8 @@ const ServiceRow = ({
           <div
             className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-500 ${
               isExpanded 
-                ? 'bg-[#CCFF00] border-[#CCFF00] rotate-180' 
-                : 'border-white/20 group-hover:border-[#CCFF00]/50'
+                ? 'bg-[#304f9f] border-[#304f9f] rotate-180' 
+                : 'border-white/20 group-hover:border-[#304f9f]/50'
             }`}
           >
             <ChevronDown
@@ -225,14 +225,14 @@ const ServiceRow = ({
             <div className="mb-8">
               <div className="flex items-center justify-between mb-4">
                 <h4 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Play className="w-5 h-5 text-[#CCFF00]" />
+                  <Play className="w-5 h-5 text-[#304f9f]" />
                   Watch How It Works
                 </h4>
                 <a 
                   href={videoUrl.replace('/embed/', '/watch?v=').split('?')[0]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[#CCFF00] hover:underline flex items-center gap-1"
+                  className="text-sm text-[#304f9f] hover:underline flex items-center gap-1"
                 >
                   Open on YouTube
                   <ExternalLink className="w-3 h-3" />
@@ -243,7 +243,7 @@ const ServiceRow = ({
                 {!isVideoPlaying ? (
                   <div className="absolute inset-0 flex items-center justify-center">
                     {/* Thumbnail background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#CCFF00]/10 via-transparent to-[#CCFF00]/5" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#304f9f]/10 via-transparent to-[#304f9f]/5" />
                     <div className="absolute inset-0 opacity-30">
                       <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -261,16 +261,16 @@ const ServiceRow = ({
                       className="relative z-10 group"
                       aria-label="Play video"
                     >
-                      <div className="w-20 h-20 rounded-full bg-[#CCFF00] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-lg shadow-[#CCFF00]/30">
+                      <div className="w-20 h-20 rounded-full bg-[#304f9f] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-lg shadow-[#304f9f]/30">
                         <Play className="w-8 h-8 text-black ml-1" fill="currentColor" />
                       </div>
                     </button>
                     
                     {/* Corner accents */}
-                    <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-[#CCFF00]/50" />
-                    <div className="absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-[#CCFF00]/50" />
-                    <div className="absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-[#CCFF00]/50" />
-                    <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-[#CCFF00]/50" />
+                    <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-[#304f9f]/50" />
+                    <div className="absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-[#304f9f]/50" />
+                    <div className="absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-[#304f9f]/50" />
+                    <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-[#304f9f]/50" />
                   </div>
                 ) : (
                   <iframe
@@ -290,7 +290,7 @@ const ServiceRow = ({
             <div className="space-y-6">
               <div className="bg-white/[0.03] rounded-xl p-5 border border-white/5">
                 <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <span className="w-1 h-5 bg-[#CCFF00] rounded-full" />
+                  <span className="w-1 h-5 bg-[#304f9f] rounded-full" />
                   Overview
                 </h4>
                 <p className="text-gray-400 leading-relaxed">
@@ -323,7 +323,7 @@ const ServiceRow = ({
             <div className="space-y-6">
               <div className="bg-white/[0.03] rounded-xl p-5 border border-white/5">
                 <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                  <span className="w-1 h-5 bg-[#CCFF00] rounded-full" />
+                  <span className="w-1 h-5 bg-[#304f9f] rounded-full" />
                   Key Features
                 </h4>
                 <ul className="space-y-3">
@@ -332,8 +332,8 @@ const ServiceRow = ({
                       key={index}
                       className="flex items-start gap-3 text-gray-400"
                     >
-                      <span className="w-5 h-5 rounded-md bg-[#CCFF00]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-[#CCFF00]" />
+                      <span className="w-5 h-5 rounded-md bg-[#304f9f]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-[#304f9f]" />
                       </span>
                       {feature}
                     </li>
@@ -351,9 +351,9 @@ const ServiceRow = ({
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-[#CCFF00]/10 to-[#CCFF00]/5 rounded-xl p-5 border border-[#CCFF00]/30">
-                <h4 className="text-lg font-semibold text-[#CCFF00] mb-2 flex items-center gap-2">
-                  <span className="w-1 h-5 bg-[#CCFF00] rounded-full" />
+              <div className="bg-gradient-to-br from-[#304f9f]/10 to-[#304f9f]/5 rounded-xl p-5 border border-[#304f9f]/30">
+                <h4 className="text-lg font-semibold text-[#304f9f] mb-2 flex items-center gap-2">
+                  <span className="w-1 h-5 bg-[#304f9f] rounded-full" />
                   Pricing
                 </h4>
                 <p className="text-gray-300">{service.pricingDetails}</p>
@@ -365,7 +365,7 @@ const ServiceRow = ({
           <div className="flex flex-wrap gap-4 mt-8 pt-6 border-t border-white/10">
             <Button
               onClick={onGetDemo}
-              className="bg-[#CCFF00] text-black hover:bg-[#b3e600] font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
+              className="bg-[#304f9f] text-black hover:bg-[#b3e600] font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
             >
               Get Demo
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -465,7 +465,7 @@ const Services = ({ data, onScrollToSection }: ServicesProps) => {
         {/* Section header */}
         <div ref={headerRef} className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Our <span className="text-[#CCFF00]">Services</span>
+            Our <span className="text-[#304f9f]">Services</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Comprehensive AI automation solutions designed to transform every aspect of your customer engagement.
@@ -496,7 +496,7 @@ const Services = ({ data, onScrollToSection }: ServicesProps) => {
           <Button
             onClick={handleGetDemo}
             variant="outline"
-            className="border-2 border-[#CCFF00] text-[#CCFF00] hover:bg-[#CCFF00] hover:text-black font-semibold px-8 py-3 rounded-full transition-all duration-300"
+            className="border-2 border-[#304f9f] text-[#304f9f] hover:bg-[#304f9f] hover:text-black font-semibold px-8 py-3 rounded-full transition-all duration-300"
           >
             Talk to a Specialist
             <ArrowRight className="ml-2 w-4 h-4" />

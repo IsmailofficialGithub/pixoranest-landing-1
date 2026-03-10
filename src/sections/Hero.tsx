@@ -143,7 +143,7 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
       {/* Scan line */}
       <div
         ref={scanLineRef}
-        className="absolute left-0 w-full h-[2px] bg-[#CCFF00] scan-line-glow z-20 origin-left"
+        className="absolute left-0 w-full h-[2px] bg-[#304f9f] scan-line-glow z-20 origin-left"
         style={{ top: '30%' }}
       />
 
@@ -180,8 +180,8 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
                 key={index}
                 className="flex items-center gap-2 text-sm sm:text-base text-gray-300"
               >
-                <span className="w-5 h-5 rounded-full bg-[#CCFF00]/20 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-3 h-3 text-[#CCFF00]" />
+                <span className="w-5 h-5 rounded-full bg-[#304f9f]/20 flex items-center justify-center flex-shrink-0">
+                  <Check className="w-3 h-3 text-[#304f9f]" />
                 </span>
                 {bullet}
               </li>
@@ -196,7 +196,7 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
             <Button
               size="lg"
               onClick={handlePrimaryCTA}
-              className="magnetic-button bg-[#CCFF00] text-black hover:bg-[#b3e600] font-semibold text-base sm:text-lg px-8 py-6 rounded-full glow-accent transition-all duration-300 hover:scale-105"
+              className="magnetic-button bg-[#304f9f] text-black hover:bg-[#b3e600] font-semibold text-base sm:text-lg px-8 py-6 rounded-full glow-accent transition-all duration-300 hover:scale-105"
             >
               {data.primaryCTA}
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -221,10 +221,10 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none" />
       
       {/* Corner accents */}
-      <div className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-[#CCFF00]/30 pointer-events-none" />
-      <div className="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-[#CCFF00]/30 pointer-events-none" />
-      <div className="absolute bottom-8 left-8 w-16 h-16 border-l-2 border-b-2 border-[#CCFF00]/30 pointer-events-none" />
-      <div className="absolute bottom-8 right-8 w-16 h-16 border-r-2 border-b-2 border-[#CCFF00]/30 pointer-events-none" />
+      <div className="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-[#304f9f]/30 pointer-events-none" />
+      <div className="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-[#304f9f]/30 pointer-events-none" />
+      <div className="absolute bottom-8 left-8 w-16 h-16 border-l-2 border-b-2 border-[#304f9f]/30 pointer-events-none" />
+      <div className="absolute bottom-8 right-8 w-16 h-16 border-r-2 border-b-2 border-[#304f9f]/30 pointer-events-none" />
     </section>
   );
 };

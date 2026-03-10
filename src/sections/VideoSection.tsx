@@ -104,8 +104,8 @@ const VideoSection = ({ data }: VideoSectionProps) => {
     >
 
       {/* Decorative elements */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#CCFF00]/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#CCFF00]/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#304f9f]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#304f9f]/5 rounded-full blur-3xl" />
 
       <div ref={containerRef} className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -124,7 +124,7 @@ const VideoSection = ({ data }: VideoSectionProps) => {
             href={getWatchUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#CCFF00]/50 rounded-full px-6 py-3 transition-all duration-300"
+            className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#304f9f]/50 rounded-full px-6 py-3 transition-all duration-300"
           >
             <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
               <Youtube className="w-5 h-5 text-white" />
@@ -133,7 +133,7 @@ const VideoSection = ({ data }: VideoSectionProps) => {
               <p className="text-white font-medium text-sm">Watch on YouTube</p>
               <p className="text-gray-500 text-xs">{getWatchUrl()}</p>
             </div>
-            <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-[#CCFF00] transition-colors ml-2" />
+            <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-[#304f9f] transition-colors ml-2" />
           </a>
 
           <div className="flex items-center gap-2 text-gray-500 text-sm">
@@ -152,7 +152,7 @@ const VideoSection = ({ data }: VideoSectionProps) => {
             <div className="absolute inset-0 flex items-center justify-center">
               {/* Background pattern */}
               <div className="absolute inset-0 opacity-20">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#CCFF00]/20 via-transparent to-[#CCFF00]/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#304f9f]/20 via-transparent to-[#304f9f]/10" />
                 <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <pattern
@@ -179,17 +179,17 @@ const VideoSection = ({ data }: VideoSectionProps) => {
                 className="relative z-10 group"
                 aria-label="Play video"
               >
-                <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-[#CCFF00] flex items-center justify-center transition-all duration-300 group-hover:scale-110 glow-accent-strong">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-[#304f9f] flex items-center justify-center transition-all duration-300 group-hover:scale-110 glow-accent-strong">
                   <Play className="w-10 h-10 sm:w-12 sm:h-12 text-black ml-1" fill="currentColor" />
                 </div>
-                <div className="absolute inset-0 rounded-full bg-[#CCFF00]/30 animate-ping" />
+                <div className="absolute inset-0 rounded-full bg-[#304f9f]/30 animate-ping" />
               </button>
 
               {/* Corner accents */}
-              <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-[#CCFF00]/50" />
-              <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-[#CCFF00]/50" />
-              <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-[#CCFF00]/50" />
-              <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-[#CCFF00]/50" />
+              <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-[#304f9f]/50" />
+              <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-[#304f9f]/50" />
+              <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-[#304f9f]/50" />
+              <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-[#304f9f]/50" />
             </div>
           ) : (
             // Video iframe
@@ -207,7 +207,7 @@ const VideoSection = ({ data }: VideoSectionProps) => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
           <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
             <span className="text-gray-500 text-sm">Source:</span>
-            <code className="text-[#CCFF00] text-sm font-mono">{data.url}</code>
+            <code className="text-[#304f9f] text-sm font-mono">{data.url}</code>
           </div>
           <p className="text-gray-500 text-sm">
             Replace this URL in <code className="text-gray-400 bg-white/5 px-2 py-1 rounded">src/data/landingData.ts</code>

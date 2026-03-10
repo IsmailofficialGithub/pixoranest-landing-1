@@ -125,15 +125,15 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
     >
 
       {/* Decorative elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#CCFF00]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#CCFF00]/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#304f9f]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#304f9f]/5 rounded-full blur-3xl" />
 
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left column: Content */}
           <div ref={contentRef}>
             <div className="animate-item mb-8">
-              <span className="inline-flex items-center gap-2 bg-[#CCFF00]/10 text-[#CCFF00] px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <span className="inline-flex items-center gap-2 bg-[#304f9f]/10 text-[#304f9f] px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4" />
                 Start Your Transformation
               </span>
@@ -154,8 +154,8 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
                   key={index}
                   className="flex items-start gap-3 text-gray-300"
                 >
-                  <span className="w-6 h-6 rounded-full bg-[#CCFF00]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-4 h-4 text-[#CCFF00]" />
+                  <span className="w-6 h-6 rounded-full bg-[#304f9f]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-[#304f9f]" />
                   </span>
                   {bullet}
                 </li>
@@ -179,9 +179,9 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
           <div className="relative">
             {isSubmitted ? (
               // Success state
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-[#CCFF00]/30 text-center">
-                <div className="w-20 h-20 rounded-full bg-[#CCFF00]/20 flex items-center justify-center mx-auto mb-6">
-                  <Check className="w-10 h-10 text-[#CCFF00]" />
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-[#304f9f]/30 text-center">
+                <div className="w-20 h-20 rounded-full bg-[#304f9f]/20 flex items-center justify-center mx-auto mb-6">
+                  <Check className="w-10 h-10 text-[#304f9f]" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">
                   Thank You!
@@ -189,7 +189,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
                 <p className="text-gray-400 mb-6">
                   We&apos;ve received your request and will be in touch within 24 hours to schedule your demo.
                 </p>
-                <div className="flex items-center justify-center gap-2 text-[#CCFF00]">
+                <div className="flex items-center justify-center gap-2 text-[#304f9f]">
                   <Mail className="w-5 h-5" />
                   <span>Check your email for confirmation</span>
                 </div>
@@ -219,7 +219,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-[#CCFF00] focus:ring-[#CCFF00]/20"
+                      className="bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-[#304f9f] focus:ring-[#304f9f]/20"
                     />
                   </div>
 
@@ -236,7 +236,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-[#CCFF00] focus:ring-[#CCFF00]/20"
+                      className="bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-[#304f9f] focus:ring-[#304f9f]/20"
                     />
                   </div>
 
@@ -253,7 +253,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
                       value={formData.company}
                       onChange={handleInputChange}
                       required
-                      className="bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-[#CCFF00] focus:ring-[#CCFF00]/20"
+                      className="bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-[#304f9f] focus:ring-[#304f9f]/20"
                     />
                   </div>
 
@@ -266,7 +266,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
                       value={formData.useCase}
                       onValueChange={handleSelectChange}
                     >
-                      <SelectTrigger className="bg-white/5 border-white/20 text-white focus:ring-[#CCFF00]/20">
+                      <SelectTrigger className="bg-white/5 border-white/20 text-white focus:ring-[#304f9f]/20">
                         <SelectValue placeholder="Select your use case" />
                       </SelectTrigger>
                       <SelectContent className="bg-[#1a1a1a] border-white/20">
@@ -302,7 +302,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
-                      className="bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-[#CCFF00] focus:ring-[#CCFF00]/20 resize-none"
+                      className="bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-[#304f9f] focus:ring-[#304f9f]/20 resize-none"
                     />
                   </div>
 
@@ -310,7 +310,7 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-[#CCFF00] text-black hover:bg-[#b3e600] font-semibold py-3 rounded-full transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-[#304f9f] text-black hover:bg-[#b3e600] font-semibold py-3 rounded-full transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">
@@ -346,13 +346,13 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
           <div className="flex items-center gap-6">
             <a
               href="#"
-              className="text-gray-500 hover:text-[#CCFF00] text-sm transition-colors"
+              className="text-gray-500 hover:text-[#304f9f] text-sm transition-colors"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-gray-500 hover:text-[#CCFF00] text-sm transition-colors"
+              className="text-gray-500 hover:text-[#304f9f] text-sm transition-colors"
             >
               Terms of Service
             </a>

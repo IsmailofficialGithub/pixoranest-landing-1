@@ -213,7 +213,7 @@ const CompanyIntro = ({ data }: CompanyIntroProps) => {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
             >
               {data.headline.split('with')[0]} with{' '}
-              <span className="text-[#CCFF00]">{data.headline.split('with')[1]}</span>
+              <span className="text-[#304f9f]">{data.headline.split('with')[1]}</span>
             </h2>
             <p
               ref={descriptionRef}
@@ -227,21 +227,21 @@ const CompanyIntro = ({ data }: CompanyIntroProps) => {
           <div ref={targetRef} className="flex justify-center items-center">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80">
               {/* Outer rotating ring */}
-              <div className="target-ring absolute inset-0 rounded-full border-2 border-dashed border-[#CCFF00]/30" />
+              <div className="target-ring absolute inset-0 rounded-full border-2 border-dashed border-[#304f9f]/30" />
               
               {/* Inner rotating ring */}
-              <div className="target-ring-inner absolute inset-8 rounded-full border border-[#CCFF00]/20" />
+              <div className="target-ring-inner absolute inset-8 rounded-full border border-[#304f9f]/20" />
               
               {/* Center target */}
-              <div className="absolute inset-16 rounded-full bg-[#CCFF00]/10 flex items-center justify-center">
-                <Target className="w-16 h-16 text-[#CCFF00]" />
+              <div className="absolute inset-16 rounded-full bg-[#304f9f]/10 flex items-center justify-center">
+                <Target className="w-16 h-16 text-[#304f9f]" />
               </div>
               
               {/* Decorative dots */}
-              <div className="absolute top-0 left-1/2 w-2 h-2 bg-[#CCFF00] rounded-full -translate-x-1/2" />
-              <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-[#CCFF00] rounded-full -translate-x-1/2" />
-              <div className="absolute left-0 top-1/2 w-2 h-2 bg-[#CCFF00] rounded-full -translate-y-1/2" />
-              <div className="absolute right-0 top-1/2 w-2 h-2 bg-[#CCFF00] rounded-full -translate-y-1/2" />
+              <div className="absolute top-0 left-1/2 w-2 h-2 bg-[#304f9f] rounded-full -translate-x-1/2" />
+              <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-[#304f9f] rounded-full -translate-x-1/2" />
+              <div className="absolute left-0 top-1/2 w-2 h-2 bg-[#304f9f] rounded-full -translate-y-1/2" />
+              <div className="absolute right-0 top-1/2 w-2 h-2 bg-[#304f9f] rounded-full -translate-y-1/2" />
             </div>
           </div>
         </div>
@@ -249,28 +249,28 @@ const CompanyIntro = ({ data }: CompanyIntroProps) => {
         {/* Who it's for / Problems / Improvements - Redesigned Cards */}
         <div ref={cardsRef} className="grid md:grid-cols-3 gap-6 mb-20">
           {/* Target Audience */}
-          <div className="info-card group relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-[#CCFF00]/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(204,255,0,0.1)] overflow-hidden">
+          <div className="info-card group relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-[#304f9f]/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(204,255,0,0.1)] overflow-hidden">
             {/* Glow effect */}
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#CCFF00]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#304f9f]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             {/* Icon container */}
             <div className="relative mb-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#CCFF00]/20 to-[#CCFF00]/5 flex items-center justify-center text-[#CCFF00] group-hover:scale-110 transition-transform duration-500 border border-[#CCFF00]/20">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#304f9f]/20 to-[#304f9f]/5 flex items-center justify-center text-[#304f9f] group-hover:scale-110 transition-transform duration-500 border border-[#304f9f]/20">
                 <BuildingIcon />
               </div>
               {/* Decorative line */}
-              <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#CCFF00] to-transparent" />
+              <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#304f9f] to-transparent" />
             </div>
 
-            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#CCFF00] transition-colors duration-300">
+            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#304f9f] transition-colors duration-300">
               Who It&apos;s For
             </h3>
             
             <ul className="space-y-3">
               {data.targetAudience.map((item, index) => (
                 <li key={index} className="text-gray-400 text-sm flex items-center gap-3 group/item">
-                  <span className="w-5 h-5 rounded-md bg-[#CCFF00]/10 flex items-center justify-center flex-shrink-0 group-hover/item:bg-[#CCFF00]/20 transition-colors">
-                    <span className="w-1.5 h-1.5 bg-[#CCFF00] rounded-full" />
+                  <span className="w-5 h-5 rounded-md bg-[#304f9f]/10 flex items-center justify-center flex-shrink-0 group-hover/item:bg-[#304f9f]/20 transition-colors">
+                    <span className="w-1.5 h-1.5 bg-[#304f9f] rounded-full" />
                   </span>
                   <span className="group-hover/item:text-gray-300 transition-colors">{item}</span>
                 </li>
@@ -342,7 +342,7 @@ const CompanyIntro = ({ data }: CompanyIntroProps) => {
         {/* How It Works */}
         <div>
           <h3 className="text-2xl sm:text-3xl font-bold text-white text-center mb-12">
-            How It <span className="text-[#CCFF00]">Works</span>
+            How It <span className="text-[#304f9f]">Works</span>
           </h3>
 
           <div
@@ -354,20 +354,20 @@ const CompanyIntro = ({ data }: CompanyIntroProps) => {
               return (
                 <div
                   key={step.id}
-                  className="step-card group relative bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#CCFF00]/50 transition-all duration-500 hover:bg-white/[0.08]"
+                  className="step-card group relative bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#304f9f]/50 transition-all duration-500 hover:bg-white/[0.08]"
                 >
                   {/* Step number badge */}
-                  <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br from-[#CCFF00] to-[#99CC00] rounded-full flex items-center justify-center text-black font-bold text-sm shadow-lg shadow-[#CCFF00]/20">
+                  <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br from-[#304f9f] to-[#304f4f] rounded-full flex items-center justify-center text-black font-bold text-sm shadow-lg shadow-[#304f9f]/20">
                     {step.number}
                   </div>
 
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#CCFF00]/10 to-transparent flex items-center justify-center mb-4 text-[#CCFF00] group-hover:scale-110 transition-transform duration-500 border border-[#CCFF00]/10">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#304f9f]/10 to-transparent flex items-center justify-center mb-4 text-[#304f9f] group-hover:scale-110 transition-transform duration-500 border border-[#304f9f]/10">
                     <StepIcon />
                   </div>
 
                   {/* Content */}
-                  <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#CCFF00] transition-colors duration-300">
+                  <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#304f9f] transition-colors duration-300">
                     {step.title}
                   </h4>
                   <p className="text-gray-400 text-sm leading-relaxed">
@@ -376,7 +376,7 @@ const CompanyIntro = ({ data }: CompanyIntroProps) => {
 
                   {/* Connector line (except last) */}
                   {index < data.steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-[2px] bg-gradient-to-r from-[#CCFF00]/50 to-transparent" />
+                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-[2px] bg-gradient-to-r from-[#304f9f]/50 to-transparent" />
                   )}
                 </div>
               );

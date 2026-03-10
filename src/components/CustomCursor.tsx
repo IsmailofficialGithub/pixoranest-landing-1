@@ -98,13 +98,13 @@ const CustomCursor = () => {
       {/* Main cursor ring */}
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-[#CCFF00] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference hidden md:block"
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-[#304f9f] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 mix-blend-difference hidden md:block"
         style={{ willChange: 'transform' }}
       />
       {/* Center dot */}
       <div
         ref={cursorDotRef}
-        className="fixed top-0 left-0 w-1 h-1 rounded-full bg-[#CCFF00] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        className="fixed top-0 left-0 w-1 h-1 rounded-full bg-[#304f9f] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 hidden md:block"
         style={{ willChange: 'transform' }}
       />
     </>
