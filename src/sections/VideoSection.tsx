@@ -164,7 +164,7 @@ const VideoSection = ({ data }: VideoSectionProps) => {
                       <path
                         d="M 40 0 L 0 0 0 40"
                         fill="none"
-                        stroke="rgba(204, 255, 0, 0.1)"
+                        stroke="#12389a"
                         strokeWidth="1"
                       />
                     </pattern>

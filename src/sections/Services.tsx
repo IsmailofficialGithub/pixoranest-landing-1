@@ -248,7 +248,7 @@ const ServiceRow = ({
                       <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                           <pattern id={`grid-${service.id}`} width="30" height="30" patternUnits="userSpaceOnUse">
-                            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(204, 255, 0, 0.1)" strokeWidth="1"/>
+                            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#12389a" strokeWidth="1"/>
                           </pattern>
                         </defs>
                         <rect width="100%" height="100%" fill={`url(#grid-${service.id})`} />
