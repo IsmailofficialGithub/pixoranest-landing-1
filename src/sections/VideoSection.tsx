@@ -203,16 +203,6 @@ const VideoSection = ({ data }: VideoSectionProps) => {
           )}
         </div>
 
-        {/* Video source info */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
-          <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
-            <span className="text-gray-500 text-sm">Source:</span>
-            <code className="text-[#304f9f] text-sm font-mono">{data.url}</code>
-          </div>
-          <p className="text-gray-500 text-sm">
-            Replace this URL in <code className="text-gray-400 bg-white/5 px-2 py-1 rounded">src/data/landingData.ts</code>
-          </p>
-        </div>
       </div>
     </section>
   );

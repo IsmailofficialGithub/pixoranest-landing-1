@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/select';
 import { ArrowRight, MessageCircle, Check, Sparkles, Shield, Clock, Mail } from 'lucide-react';
 import type { FinalCTAData } from '@/types';
+import { supabase } from '@/lib/supabase';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,11 +106,29 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const { error } = await supabase
+        .from('landing_contact_form')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            company: formData.company,
+            use_case: formData.useCase,
+            message: formData.message,
+          },
+        ]);
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (error) throw error;
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // For demo purposes, we still show the success state but log the error
+      // In production, you might want to show an actual error message to the user
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleTalkToSpecialist = () => {

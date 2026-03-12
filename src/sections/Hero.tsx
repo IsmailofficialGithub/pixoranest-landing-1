@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowRight, Calendar } from 'lucide-react';
+import { Check, ArrowRight, Calendar, Sparkles, Bot, Loader2 } from 'lucide-react';
 import type { HeroData } from '@/types';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -20,6 +20,8 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
   const ctaRef = useRef<HTMLDivElement>(null);
   const scanLineRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const [showOverlay, setShowOverlay] = useState(true);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -29,20 +31,45 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
     const cta = ctaRef.current;
     const scanLine = scanLineRef.current;
     const content = contentRef.current;
+    const overlay = overlayRef.current;
 
-    if (!section || !headline || !subheadline || !bullets || !cta || !scanLine || !content) return;
+    if (!section || !headline || !subheadline || !bullets || !cta || !scanLine || !content || !overlay) return;
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (prefersReducedMotion) {
-      // Show content immediately without animations
       gsap.set([headline, subheadline, bullets, cta], { opacity: 1, y: 0 });
+      setShowOverlay(false);
       return;
     }
 
     const ctx = gsap.context(() => {
-      // Initial load animation timeline
-      const loadTl = gsap.timeline({ delay: 0.3 });
+      // 1. Welcome Overlay Animation Sequence
+      const welcomeTl = gsap.timeline({
+        onComplete: () => {
+          gsap.to(overlay, {
+            opacity: 0,
+            y: -100,
+            duration: 0.8,
+            ease: 'power3.inOut',
+            onComplete: () => setShowOverlay(false)
+          });
+        }
+      });
+
+      // Show overlay items
+      welcomeTl.fromTo(
+        overlay.querySelectorAll('.overlay-item'),
+        { opacity: 0, y: 20, scale: 0.9 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.2, ease: 'back.out(1.7)' },
+        '+=0.2'
+      );
+
+      // Hold for 2.5 seconds
+      welcomeTl.to({}, { duration: 1.5 });
+
+      // 2. Main Hero Content Entrance (Start after overlay begins to fade)
+      const loadTl = gsap.timeline({ delay: 3.0 });
 
       // Scan line entrance
       loadTl.fromTo(
@@ -51,7 +78,7 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
         { scaleX: 1, opacity: 1, duration: 0.8, ease: 'power3.out' }
       );
 
-      // Headline reveal with character animation
+      // Headline reveal
       loadTl.fromTo(
         headline,
         { opacity: 0, y: 60 },
@@ -93,7 +120,6 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
           pin: true,
           scrub: 0.5,
           onLeaveBack: () => {
-            // Reset all elements when scrolling back to top
             gsap.to([headline, subheadline, bullets, cta], {
               opacity: 1,
               y: 0,
@@ -104,7 +130,6 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
         },
       });
 
-      // Scan line moves down
       scrollTl.fromTo(
         scanLine,
         { top: '20%' },
@@ -112,7 +137,6 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
         0
       );
 
-      // Content fades and scales out
       scrollTl.fromTo(
         content,
         { opacity: 1, scale: 1 },
@@ -129,21 +153,58 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
   };
 
   const handleSecondaryCTA = () => {
-    onScrollToSection?.('final-cta');
+    window.open('https://wa.me/919315559719', '_blank');
   };
 
   return (
     <section
       ref={sectionRef}
       id="hero"
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#050505]"
     >
-      {/* Scan line */}
+      {/* Welcome Overlay */}
+      {showOverlay && (
+        <div 
+          ref={overlayRef}
+          className="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none"
+        >
+          <div className="absolute inset-0 bg-black/95 backdrop-blur-2xl" />
+          
+          <div className="relative z-10 text-center px-6">
+            <div className="overlay-item mb-10">
+              <div className="inline-flex items-center justify-center p-2 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl overflow-hidden relative group">
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#304f9f]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                
+                <img 
+                  src="/logo.png" 
+                  alt="Pixoranest Logo" 
+                  className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+                />
+              </div>
+            </div>
+            
+            <h2 className="overlay-item text-4xl sm:text-6xl font-bold mb-4 tracking-tighter">
+              <span className="text-white">WELCOME TO </span>
+              <span className="text-[#304f9f]">THE FUTURE</span>
+            </h2>
+            
+            <p className="overlay-item text-gray-400 text-lg sm:text-xl max-w-lg mx-auto mb-8 font-light">
+              Designing your 24/7 intelligent business workspace...
+            </p>
+            
+            <div className="overlay-item flex items-center justify-center gap-3 text-[#304f9f]/60">
+              <Loader2 className="w-5 h-5 animate-spin" />
+              <span className="text-sm font-medium uppercase tracking-[0.3em] font-mono">Initializing System</span>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Scan line */}
       <div
         ref={scanLineRef}
-        className="absolute left-0 w-full h-[2px] bg-[#304f9f] scan-line-glow z-20 origin-left"
+        className="absolute left-0 w-full h-[2px] bg-[#304f9f] scan-line-glow z-20 origin-left opacity-0"
         style={{ top: '30%' }}
       />
 
@@ -153,13 +214,20 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
         className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
       >
         <div className="text-center">
-          {/* Headline */}
+          {/* Headline with Logo */}
           <h1
             ref={headlineRef}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold mb-6 leading-tight tracking-tighter"
+            className="flex flex-col items-center justify-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold mb-6 leading-tight tracking-tighter"
           >
-            <span className="text-white">PIXORA</span>
-            <span className="text-[#023ebf]">NEST</span>
+            <img 
+              src="/logo.png" 
+              alt="Pixoranest Logo" 
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mb-6 object-contain"
+            />
+            <span>
+              <span className="text-white">PIXORA</span>
+              <span className="text-[#023ebf]">NEST</span>
+            </span>
           </h1>
 
           {/* Subheadline */}

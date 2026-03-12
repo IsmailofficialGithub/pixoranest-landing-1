@@ -155,26 +155,26 @@ export const landingData: LandingPageData = {
       implementation: "Quick 1-week setup. We configure your business information, integrate calendars, and set up call routing rules. Training and optimization included.",
       pricingDetails: "Starting at $299/month for basic reception services. Premium packages with advanced features start at $499/month."
     },
-    {
-      id: "service-4",
-      name: "Voice Support Agent",
-      shortDescription: "Advanced voice AI for complex customer support and technical assistance.",
-      price: "Starting at $599/month",
-      fullDescription: "Our most sophisticated voice AI solution, designed for complex support scenarios. It can troubleshoot issues, guide customers through processes, access account information, and provide detailed technical assistance.",
-      problem: "Support teams are overwhelmed with repetitive inquiries, leading to long wait times, frustrated customers, and burned-out agents.",
-      howItWorks: "The Voice Support Agent uses advanced AI to understand complex queries, access your knowledge base and customer data, and provide accurate solutions. It can walk customers through troubleshooting steps, process returns, and escalate intelligently.",
-      features: [
-        "Advanced troubleshooting",
-        "Account access and verification",
-        "Knowledge base integration",
-        "Ticket creation and tracking",
-        "Sentiment analysis",
-        "Intelligent escalation",
-        "Call summary generation"
-      ],
-      implementation: "Comprehensive 3-4 week setup including knowledge base integration, custom training, and extensive testing. Ongoing optimization included.",
-      pricingDetails: "Starting at $599/month for up to 1,000 minutes. Enterprise packages with unlimited minutes and custom features available."
-    },
+    // {
+    //   id: "service-4",
+    //   name: "Voice Support Agent",
+    //   shortDescription: "Advanced voice AI for complex customer support and technical assistance.",
+    //   price: "Starting at $599/month",
+    //   fullDescription: "Our most sophisticated voice AI solution, designed for complex support scenarios. It can troubleshoot issues, guide customers through processes, access account information, and provide detailed technical assistance.",
+    //   problem: "Support teams are overwhelmed with repetitive inquiries, leading to long wait times, frustrated customers, and burned-out agents.",
+    //   howItWorks: "The Voice Support Agent uses advanced AI to understand complex queries, access your knowledge base and customer data, and provide accurate solutions. It can walk customers through troubleshooting steps, process returns, and escalate intelligently.",
+    //   features: [
+    //     "Advanced troubleshooting",
+    //     "Account access and verification",
+    //     "Knowledge base integration",
+    //     "Ticket creation and tracking",
+    //     "Sentiment analysis",
+    //     "Intelligent escalation",
+    //     "Call summary generation"
+    //   ],
+    //   implementation: "Comprehensive 3-4 week setup including knowledge base integration, custom training, and extensive testing. Ongoing optimization included.",
+    //   pricingDetails: "Starting at $599/month for up to 1,000 minutes. Enterprise packages with unlimited minutes and custom features available."
+    // },
     {
       id: "service-5",
       name: "Social Media Automation",
@@ -215,30 +215,30 @@ export const landingData: LandingPageData = {
       implementation: "3-week implementation including helpdesk integration, knowledge base connection, and workflow configuration. Training included.",
       pricingDetails: "Starting at $449/month for up to 2,000 tickets. Scale pricing based on volume. Full enterprise solutions available."
     },
-    {
-      id: "service-7",
-      name: "Custom Integrations & Workflow Automation",
-      shortDescription: "Bespoke automation solutions tailored to your unique business processes.",
-      price: "Contact Us",
-      fullDescription: "When off-the-shelf solutions aren't enough, we build custom AI automation tailored to your specific workflows. From complex multi-system integrations to proprietary process automation, we deliver solutions that fit your business perfectly.",
-      problem: "Every business has unique processes that generic tools can't address. Manual workarounds and patchwork solutions create inefficiencies and errors.",
-      howItWorks: "We analyze your workflows, identify automation opportunities, and build custom AI solutions that integrate seamlessly with your existing tech stack. From data processing to decision automation, we handle it all.",
-      features: [
-        "Custom AI model development",
-        "Multi-system integrations",
-        "Workflow orchestration",
-        "Data processing automation",
-        "API development",
-        "Legacy system connectivity",
-        "Ongoing maintenance and support"
-      ],
-      implementation: "Custom timeline based on project scope. Typical engagements range from 4-12 weeks. We follow agile methodology with regular check-ins.",
-      pricingDetails: "Custom pricing based on project requirements. Contact us for a free consultation and detailed proposal."
-    }
+    // {
+    //   id: "service-7",
+    //   name: "Custom Integrations & Workflow Automation",
+    //   shortDescription: "Bespoke automation solutions tailored to your unique business processes.",
+    //   price: "Contact Us",
+    //   fullDescription: "When off-the-shelf solutions aren't enough, we build custom AI automation tailored to your specific workflows. From complex multi-system integrations to proprietary process automation, we deliver solutions that fit your business perfectly.",
+    //   problem: "Every business has unique processes that generic tools can't address. Manual workarounds and patchwork solutions create inefficiencies and errors.",
+    //   howItWorks: "We analyze your workflows, identify automation opportunities, and build custom AI solutions that integrate seamlessly with your existing tech stack. From data processing to decision automation, we handle it all.",
+    //   features: [
+    //     "Custom AI model development",
+    //     "Multi-system integrations",
+    //     "Workflow orchestration",
+    //     "Data processing automation",
+    //     "API development",
+    //     "Legacy system connectivity",
+    //     "Ongoing maintenance and support"
+    //   ],
+    //   implementation: "Custom timeline based on project scope. Typical engagements range from 4-12 weeks. We follow agile methodology with regular check-ins.",
+    //   pricingDetails: "Custom pricing based on project requirements. Contact us for a free consultation and detailed proposal."
+    // }
   ],
 
   video: {
-    url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    url: "https://www.youtube.com/embed/Sc6mP0pXWwY",
     type: "youtube",
     headline: "See How It Works",
     description: "Watch how our AI automation transforms businesses in just 2 minutes."
