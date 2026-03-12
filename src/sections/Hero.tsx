@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
-import { Check, ArrowRight, Calendar, Sparkles, Bot, Loader2 } from 'lucide-react';
+import { Check, ArrowRight, Calendar, Loader2 } from 'lucide-react';
 import type { HeroData } from '@/types';
 
 gsap.registerPlugin(ScrollTrigger);
