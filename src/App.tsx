@@ -215,7 +215,6 @@ function App() {
         <SafeSection sectionName="Hero">
           <Hero 
             data={landingData.hero} 
-            onScrollToSection={scrollToSection}
           />
         </SafeSection>
 
@@ -233,7 +232,6 @@ function App() {
         <SafeSection sectionName="Services">
           <Services 
             data={landingData.services} 
-            onScrollToSection={scrollToSection}
           />
         </SafeSection>
 

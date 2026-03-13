@@ -4,12 +4,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ArrowRight, Check, Play, ExternalLink } from 'lucide-react';
 import type { Service } from '@/types';
+import { WHATSAPP_LINK } from '@/lib/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface ServicesProps {
   data: Service[];
-  onScrollToSection?: (sectionId: string) => void;
 }
 
 // Professional SVG Icons for each service
@@ -384,7 +384,7 @@ const ServiceRow = ({
   );
 };
 
-const Services = ({ data, onScrollToSection }: ServicesProps) => {
+const Services = ({ data }: ServicesProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
@@ -451,7 +451,7 @@ const Services = ({ data, onScrollToSection }: ServicesProps) => {
   };
 
   const handleGetDemo = () => {
-    onScrollToSection?.('final-cta');
+    window.open(WHATSAPP_LINK, '_blank');
   };
 
   return (

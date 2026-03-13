@@ -4,15 +4,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
 import { Check, ArrowRight, Calendar, Loader2 } from 'lucide-react';
 import type { HeroData } from '@/types';
+import { WHATSAPP_LINK } from '@/lib/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface HeroProps {
   data: HeroData;
-  onScrollToSection?: (sectionId: string) => void;
 }
 
-const Hero = ({ data, onScrollToSection }: HeroProps) => {
+const Hero = ({ data }: HeroProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subheadlineRef = useRef<HTMLParagraphElement>(null);
@@ -149,11 +149,11 @@ const Hero = ({ data, onScrollToSection }: HeroProps) => {
   }, []);
 
   const handlePrimaryCTA = () => {
-    onScrollToSection?.('final-cta');
+    window.open(WHATSAPP_LINK, '_blank');
   };
 
   const handleSecondaryCTA = () => {
-    window.open('https://wa.me/919315559719', '_blank');
+    window.open(WHATSAPP_LINK, '_blank');
   };
 
   return (

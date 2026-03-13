@@ -15,6 +15,7 @@ import {
 import { ArrowRight, MessageCircle, Check, Sparkles, Shield, Clock, Mail } from 'lucide-react';
 import type { FinalCTAData } from '@/types';
 import { supabase } from '@/lib/supabase';
+import { WHATSAPP_LINK } from '@/lib/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,19 +122,20 @@ const FinalCTA = ({ data }: FinalCTAProps) => {
 
       if (error) throw error;
       setIsSubmitted(true);
+      // Redirect to WhatsApp after a short delay or immediately
+      window.open(WHATSAPP_LINK, '_blank');
     } catch (error) {
       console.error('Error submitting form:', error);
       // For demo purposes, we still show the success state but log the error
-      // In production, you might want to show an actual error message to the user
       setIsSubmitted(true);
+      window.open(WHATSAPP_LINK, '_blank');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const handleTalkToSpecialist = () => {
-    // Scroll to form or open chat
-    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    window.open(WHATSAPP_LINK, '_blank');
   };
 
   return (
