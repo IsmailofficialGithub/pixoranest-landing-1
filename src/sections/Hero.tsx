@@ -171,15 +171,15 @@ const Hero = ({ data }: HeroProps) => {
           <div className="absolute inset-0 bg-black/95 backdrop-blur-2xl" />
           
           <div className="relative z-10 text-center px-6">
-            <div className="overlay-item mb-10">
-              <div className="inline-flex items-center justify-center p-2 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl overflow-hidden relative group">
+            <div className="overlay-item mb-4 w-full flex justify-center">
+              <div className="inline-flex items-center justify-center overflow-hidden relative group">
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#304f9f]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 
                 <img 
                   src="/logo.png" 
                   alt="Pixoranest Logo" 
-                  className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+                  className="w-64 sm:w-96 md:w-[450px] h-auto object-contain relative z-10"
                 />
               </div>
             </div>
@@ -217,17 +217,14 @@ const Hero = ({ data }: HeroProps) => {
           {/* Headline with Logo */}
           <h1
             ref={headlineRef}
-            className="flex flex-col items-center justify-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold mb-6 leading-tight tracking-tighter"
+            className="flex flex-col items-center justify-center mb-6 w-full"
           >
+            <span className="sr-only">PIXORANEST</span>
             <img 
               src="/logo.png" 
               alt="Pixoranest Logo" 
-              className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mb-6 object-contain"
+              className="w-72 sm:w-96 md:w-[500px] lg:w-[650px] h-auto object-contain"
             />
-            <span>
-              <span className="text-white">PIXORA</span>
-              <span className="text-[#023ebf]">NEST</span>
-            </span>
           </h1>
 
           {/* Subheadline */}
