@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
@@ -106,29 +106,7 @@ function App() {
     }
   }, []);
 
-  // Scroll to section handler
-  const scrollToSection = useCallback((sectionId: string) => {
-    try {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        if (lenisRef.current) {
-          lenisRef.current.scrollTo(element, {
-            offset: 0,
-            duration: 1.5,
-          });
-        } else {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    } catch (error) {
-      console.warn('Scroll failed:', error);
-      // Fallback to native scroll
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, []);
+
 
   // Global scroll snap for pinned sections
   useEffect(() => {
